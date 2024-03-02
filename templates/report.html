@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rendering Dynamic Images Using FastAPI</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="/report" enctype="multipart/form-data" method="POST">
+        <input name="file" type="file" />
+        <input type="submit" />
+    </form>
+
+    {% if result %}
+    <h1>Prediction Result</h1>
+    <p>Prediction: {{ result }}</p>
+
+
+    {% else %}
+    <h1>No prediction result available</h1>
+    {% endif %}
+
+
+</div>
+
+</body>
+</html>

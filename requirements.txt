@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+fastapi-sqlalchemy
+pydantic
+alembic
+psycopg2
+python-dotenv
+pandas
+Jinja2==3.0.3
+python-multipart
+opencv-python
+tensorflow
+Pillow
